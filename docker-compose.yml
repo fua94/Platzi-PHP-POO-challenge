@@ -1,0 +1,12 @@
+services:
+  php:
+    container_name: php
+    build: .
+    volumes:
+      - vendor:/app/vendor
+      - ./:/app
+    ports:
+      - 8000:8000
+    #   - 8888:8888
+volumes:
+  vendor:
